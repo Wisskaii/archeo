@@ -1,5 +1,6 @@
 package fr.babylone.archeo;
 import fr.babylone.archeo.entites.*;
+import java.util.ArrayList;
 
 
 public class AppArcheo {
@@ -40,6 +41,45 @@ public class AppArcheo {
 		System.out.println("Complétude de l'objet 2 : " + obj2.getCompletude());
 		
 		// Exo 4 - Archéologues
+		
+		Etudiant ark1 = new Etudiant(1, "HOSBORN", "Harry", AnneeEtude.L3 );
+		System.out.println(ark1.toString());
+		System.out.println("Année d'étude de l'achéologue numéro 1 : " + ark1.getNiveauScolaire());
+		
+		Archeologue ark2 = new Etudiant (2, "ALLEN", "Liz", AnneeEtude.M1);
+		System.out.println(ark2.toString());
+		System.out.println("Année d'étude de l'archéologue numéro 2 : " + ((Etudiant)ark2).getNiveauScolaire());
+		
+		Professeur ark3 = new Professeur(1, "PARKER", "Peter", 2);
+		System.out.println(ark3.toString());
+		System.out.println("Corps de l'archéologue numéro 3 : " + ark3.getCorps());
+		
+		Archeologue ark4 = new Professeur(2, "WATSON", "Mary Jane", 1) ;
+		System.out.println(ark4.toString());
+		System.out.println("Corps du professeur numéro 4 : " + ((Professeur)ark4).getCorps());
+		
+		ArrayList<Archeologue> arks = new ArrayList<Archeologue>();
+		
+		arks.add(ark1) ;
+		arks.add(ark2) ;
+		arks.add(ark3) ;
+		arks.add(ark4) ;
+		
+		for(Archeologue archeo : arks){
+			System.out.println(archeo.toString());
+		}
+		
+		for(Archeologue archeo : arks){
+			System.out.println(archeo.getNom());
+		}
+		
+		for(Archeologue archeo : arks){
+			if(archeo instanceof Etudiant){
+				System.out.println(archeo.toString());
+			}
+		}
+		
+		// Exo 5 - Equipes
 		
 		
 		
